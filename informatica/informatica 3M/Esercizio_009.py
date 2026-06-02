@@ -1,0 +1,12 @@
+secondi = int(input("Inserisci Secondi: "))
+
+minuti = int(secondi/60)
+print("Minuti:",minuti)
+ore = int(minuti/60)
+print("Ore:",ore)
+giorni = int(ore/24)
+print("Giorni:",giorni)
+mesi = int(giorni/30)
+print("Mesi:",mesi)
+anni = int(mesi/12)
+print("Anni:",anni)

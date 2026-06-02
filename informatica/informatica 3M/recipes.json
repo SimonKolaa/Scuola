@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan Cheese"],
+        "instructions": "Boil the spaghetti. Fry the pancetta. Mix eggs and cheese. Combine everything."
+    },
+    {
+        "id": 2,
+        "name": "Spaghetti Bolognese",
+        "ingredients": ["Spaghetti", "Beef Mince", "Tomato Sauce", "Onion", "Garlic"],
+        "instructions": "Boil the spaghetti. Fry the beef mince. Add onion and garlic. Add tomato sauce. Combine everything."
+    }
+]
+

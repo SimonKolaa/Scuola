@@ -1,0 +1,93 @@
+vantaggi subnetting:
+- minor spreco di indirizzi
+- riduzione traffico di rete
+- miglioramnento delle performance della rete
+
+definizione piano di indirizzamento:
+il risultato della pianificazione dell'assegnazione degli indirizzi IP agli host da parte dell' amministratore di rete
+se necessario si attua il subnetting
+un piano di indirizzamento deve considerare sviluppi futuri della rete.
+
+ESERCIZIO
+voglio realizzare 50 subnet con indirizzi di classe B
+quanti host avrà ogni sottorete?
+
+N.N.H.H
+
+In una rete di classe B, l'indirizzo IP è composto da 16 bit per la rete e 16 bit per gli host. Per ottenere 50 subnet, dovrai utilizzare parte dei bit degli host per creare le subnet.
+
+Per calcolare quanti bit sono necessari per 50 subnet, puoi utilizzare la formula \(2^n \geq 50\), dove \(n\) è il numero di bit da utilizzare.
+
+- \(2^5 = 32\) (non sufficiente)
+- \(2^6 = 64\) (sufficiente)
+
+Dunque, avrai bisogno di 6 bit per le subnet. Questo significa che utilizzerai 6 bit dai 16 bit disponibili per gli host, riducendo il numero di bit per gli host a \(16 - 6 = 10\).
+
+Con 10 bit per gli host, il numero massimo di host per ogni sottorete può essere calcolato come \(2^{10} - 2\) (dove sottraiamo 2 per l'indirizzo di rete e l'indirizzo di broadcast):
+
+\[
+2^{10} - 2 = 1024 - 2 = 1022
+\]
+
+Di conseguenza, ogni sottorete avrà a disposizione 1022 host.
+
+ESERCIZIO 
+voglio realizzare 20 sottoreti con una classe A
+quanti host per ogni sottorete?
+
+N.H.H.H
+
+log2 20 [4,3] = 5
+24-5 = 19
+2^19 - 2
+
+dato l'indirizzo ip 130.10.67.160 e consideriamo una rete suddivisa in 4 sottoreti, trovare l'indirizzo di rete
+
+
+
+Per suddividere una rete in sottoreti, dobbiamo prima capire quale sia la classe dell'indirizzo IP e quanti bit riservare per le sottoreti. L'indirizzo IP fornito è 130.10.67.160, che appartiene alla classe B (gli indirizzi IP di classe B vanno da 128.0.0.0 a 191.255.255.255).
+
+Un indirizzo IP di classe B ha inizialmente una maschera di rete predefinita di 255.255.0.0 (o /16). Questo ci fornisce 16 bit per l'identificativo di rete e 16 bit per l'identificativo dell'host.
+
+### Suddivisione in sottoreti
+
+Se vogliamo suddividere la rete in 4 sottoreti, dobbiamo determinare quanti bit riservare per le sottoreti. Possiamo utilizzare la formula \(2^n \geq m\), dove \(n\) è il numero di bit da prendere in prestito e \(m\) è il numero di sottoreti desiderate.
+
+In questo caso, \(m = 4\). Pertanto, \(2^n \geq 4\) implica che \(n = 2\) (poiché \(2^2 = 4\)).
+
+### Nuova maschera di rete
+
+Prendendo in prestito 2 bit per le sottoreti, la nuova maschera di rete diventa:
+- Classica: 16 bit (per la rete)
+- Aggiungendo 2 bit (per le sottoreti)
+
+Quindi la nuova maschera diventa /14 (16 - 2).
+
+La subnetmask di rete in notazione decimale:
+- 255.255.252.0
+
+### Calcolo degli indirizzi di rete
+
+Ora che abbiamo la maschera di rete, possiamo calcolare gli indirizzi di rete per ciascuna delle 4 sottoreti.
+
+Gli indirizzi di rete saranno:
+1. **Sottorete 1**: 130.10.64.0
+2. **Sottorete 2**: 130.10.68.0
+3. **Sottorete 3**: 130.10.72.0
+4. **Sottorete 4**: 130.10.76.0
+
+ Indirizzo di rete per l'indirizzo IP fornito
+
+L'indirizzo IP fornito (130.10.67.160) si trova nella seconda sottorete, poiché rientra nell'intervallo di 130.10.64.0 - 130.10.67.255. Quindi l'indirizzo di rete per questo IP è **130.10.68.0** (la sottorete successiva).
+
+Quindi, l'indirizzo di rete dell'IP fornito 130.10.67.160, considerando la suddivisione in 4 sottoreti, è  **130.10.64.0**.
+
+
+ESERCIZIO trova l'indirizzo di rete
+indirizzo ip --> 165.178.10.124
+subnet mask --> 255.252.0.0
+
+10100101.10110010.00001010.01111100 indirizzo ip
+||||||||
+11111111.1111100.0000000.00000000 subnet mask
+10100101.10110000.00000000.00000000 ---> 165.176.0.0 indirizzo di rete

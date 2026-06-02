@@ -1,0 +1,26 @@
+@startuml Casa
+class Casa {
+    - indirizzo: str
+    - proprietario: str
+    - stanze: List<Stanza>
+    + __init__(indirizzo: str, proprietario: str)
+    + get_indirizzo(): str
+    + set_indirizzo(indirizzo: str)
+    + get_proprietario(): str
+    + set_proprietario(proprietario: str)
+    + aggiungi_stanza(stanza: Stanza)
+    + get_stanze(): List<Stanza>
+}
+
+class Stanza {
+    - nome: str
+    - superficie: float
+    + __init__(nome: str, superficie: float)
+    + get_nome(): str
+    + set_nome(nome: str)
+    + get_superficie(): float
+    + set_superficie(superficie: float)
+}
+
+Casa "1" -- "0..*" Stanza
+@enduml

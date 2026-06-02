@@ -1,0 +1,57 @@
+@startuml Ricetta
+class Ricetta {
+    -nome: str
+    -tempo_preparazione: int
+    -ingredienti: list
+    -difficolta: str
+    +__init__(nome: str, tempo_preparazione: int, ingredienti: list, difficolta: str)
+    +get_nome(): str
+    +set_nome(nome: str)
+    +get_tempo_preparazione(): int
+    +set_tempo_preparazione(tempo_preparazione: int)
+    +get_ingredienti(): list
+    +set_ingredienti(ingredienti: list)
+    +get_difficolta(): str
+    +set_difficolta(difficolta: str)
+    +aggiungi_ingrediente(ingrediente: str)
+    +calcola_tempo_totale(ricette: list): int
+    +__str__(): str
+}
+
+class Primo {
+    -tipo_pasta: str
+    -sugo: str
+    +__init__(nome: str, tempo_preparazione: int, ingredienti: list, difficolta: str, tipo_pasta: str, sugo: str)
+    +get_tipo_pasta(): str
+    +set_tipo_pasta(tipo_pasta: str)
+    +get_sugo(): str
+    +set_sugo(sugo: str)
+    +__str__(): str
+}
+
+class Secondo {
+    -tipo_carne: str
+    -cottura: str
+    +__init__(nome: str, tempo_preparazione: int, ingredienti: list, difficolta: str, tipo_carne: str, cottura: str)
+    +get_tipo_carne(): str
+    +set_tipo_carne(tipo_carne: str)
+    +get_cottura(): str
+    +set_cottura(cottura: str)
+    +__str__(): str
+}
+
+class Dolce {
+    -zucchero: str
+    -tipo_dolce: str
+    +__init__(nome: str, tempo_preparazione: int, ingredienti: list, difficolta: str, zucchero: str, tipo_dolce: str)
+    +get_zucchero(): str
+    +set_zucchero(zucchero: str)
+    +get_tipo_dolce(): str
+    +set_tipo_dolce(tipo_dolce: str)
+    +__str__(): str
+}
+
+Ricetta <|-- Primo
+Ricetta <|-- Secondo
+Ricetta <|-- Dolce
+@enduml

@@ -1,0 +1,13 @@
+wireshark =software di packet-sniffing e valutazioni sullo stato della rete
+netstat = informazioni sulla rete
+
+
+probema delle tre armate
+è un metodo per spiegare il trhee-way handshake
+
+devono comunicare perchè "da soli non bastano"
+la necessità di mettersi accordo in tre fasi
+-due armate A
+la A manda un messaggero oltre la montagna e manda un mesaggio e mettersi d'accordo
+l'altra A deve rispondere e se risponde la prima A deve confermare
+la prima A deve dare l'ok dell'ok

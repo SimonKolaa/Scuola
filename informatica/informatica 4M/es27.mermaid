@@ -1,0 +1,43 @@
+classDiagram
+class Volo {
+    -numeroVolo: str
+    -destinazione: str
+    -dataOraPartenza: str
+    -numeroMassimoPasseggeri: int
+}
+class Prenotazione {
+    -nomePasseggero: str
+    -tipoClasse: str
+    -volo: Volo
+}
+class Sistema {
+    -List Volo
+    -List Prenotazione
+    +aggiungiVolo(volo): 
+    +aggiungiPrenotazione(prenotazione): 
+    +visualizzaVoli(): 
+    +visualizzaPrenotazioni(): 
+}
+
+Volo "1" --"*" Prenotazione
+Sistema "1" --"*" Volo
+
+
+
+
+
+%%Il sistema permette di gestire le prenotazioni di voli aerei. Ogni volo ha un numero di volo, una destinazione, una data e ora di partenza e un numero massimo di passeggeri. Esistono due tipologie di prenotazioni: e . Ogni prenotazione può essere aggiunta al sistema, e il programma deve consentire di visualizzare le informazioni sui voli e le prenotazioni.Requisiti:
+%%con gli attributi di base:
+%%numeroVolo
+%%destinazione
+%%dataOraPartenza
+%%numeroMassimoPasseggeri
+%%con gli attributi di base:
+%%nomePasseggero
+%%tipoClasse
+%%volo
+%%deve gestire:
+%%Una lista di voli.
+%%Una lista di prenotazioni.
+%%Permettere l’aggiunta di nuovi voli e prenotazioni.
+%%Visualizzare le informazioni di tutti i voli e le prenotazioni.

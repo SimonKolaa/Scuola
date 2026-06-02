@@ -1,0 +1,37 @@
+@startuml Ristorante
+
+class Piatto {
+  - nome: Str
+  - prezzo: double
+  - disponibile: bool
+  + ordina()
+  + disponi()
+  + ricerca(nome: String, prezzo: double): Piatto[]
+}
+
+class Antipasto {
+  - ingredienti: Str[]
+  - porzione: Str
+}
+
+class Primo {
+  - tipo_pasta: Str
+  - sugo: Str
+}
+
+class Secondo {
+  - tipo_carne: Str
+  - cottura: Str
+}
+
+class Dolce {
+  - tipo_dolce: Str
+  - calorie: int
+}
+
+Piatto <|-- Antipasto
+Piatto <|-- Primo
+Piatto <|-- Secondo
+Piatto <|-- Dolce
+
+@enduml

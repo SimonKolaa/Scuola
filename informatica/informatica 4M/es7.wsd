@@ -1,0 +1,31 @@
+@startuml Biblioteca
+
+class MaterialeBiblioteca {
+  - titolo: Str
+  - anno_pubblicazione: int
+  - disponibile: bool
+  + prestito() 
+  + restituzione()
+  + ricerca(titolo: String, anno_pubblicazione: int): MaterialeBiblioteca[]
+}
+
+class Libro {
+  - autore: Str
+  - numero_pagine: int
+}
+
+class Rivista {
+  - numero_edizione: int
+  - mese_pubblicazione: int
+}
+
+class DVD {
+  - regista: Str
+  - durata: int
+}
+
+MaterialeBiblioteca <|-- Libro
+MaterialeBiblioteca <|-- Rivista
+MaterialeBiblioteca <|-- DVD
+
+@enduml

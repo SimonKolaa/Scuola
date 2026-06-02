@@ -1,0 +1,69 @@
+classDiagram
+
+    class Utente{
+        - str nome_utente
+        - str email
+        - str password
+        - str profilo
+        + utente(nome_utente: str, email: str, password: str, profilo: str)
+        + get_nome_utente() : str
+        + get_email() : str
+        + get_password() : str
+        + get_profilo() : str
+        + get_dettagli
+        + aggiorna_profilo
+    }
+    class Foto {
+        -str ID
+        -str titolo
+        -str descrizione
+        -str data_caricamento
+        -str utente
+        -str album
+        +foto(ID: str, titolo: str, descrizione: str, data_caricamento: str, utente: str, album: str)
+        + get_ID() : str
+        + get_titolo() : str
+        + get_descrizione() : str
+        + get_data_caricamento() : str
+        + get_utente() : str
+        + get_album() : str
+        + get_dettagli
+        + aggiorna_foto
+    }
+    class Album {
+        -str titolo
+        -str descrizione
+        -str utente
+        -list[Foto] foto
+        +album(titolo: str, descrizione: str, utente: str, foto: list)
+        + get_titolo() : str
+        + get_descrizione() : str
+        + get_utente() : str
+        + get_foto() : list
+        + get_dettagli
+        + aggiorna_album
+    }
+    
+    Utente "1" -- "*" Foto : carica
+    Foto "*" -- "*" Commento : commenta
+    Album "1" -- "*" Utente : appartiene
+    Foto "1" -- "*" Album : appartiene
+    Utente "*" -- "1" Album : crea
+    Commento "*" -- "*" Utente : appartiene
+    Commento "*" -- "*" Foto : appartiene
+
+   
+
+
+
+%%Un social network di fotografia (instagram). Gli utenti possono registrarsi, creare un profilo, caricare foto, seguire altri utenti. Ogni foto ha un titolo, una descrizione. Gli utenti possono creare album per organizzare le loro foto.
+%%Classi Principali:
+%%Utente: nome utente, email, password, profilo (immagine, biografia)
+%%Foto: ID, titolo, descrizione, data caricamento, utente (chi l'ha caricata), album (a quale album appartiene)
+%%Album: titolo, descrizione, utente (chi l'ha creato), foto (lista di foto)
+%%Relazioni:
+%%Un utente può caricare molte foto (relazione uno-a-molti).
+%%Una foto può avere molti commenti (relazione uno-a-molti).
+%%Un commento appartiene a un utente e a una foto (relazione molti-a-molti).
+%%Una foto appartiene a un album (relazione uno-a-molti).
+%%Un album appartiene a un utente (relazione uno-a-molti).

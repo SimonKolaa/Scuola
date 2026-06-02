@@ -1,0 +1,17 @@
+@startuml Libro
+class Libro {
+    - _titolo: String
+    - _autore: String
+    - _pagine: int
+    + titolo: String
+    + autore: String
+    + pagine: int
+    + __init__(titolo: String, autore: String, pagine: int)
+    + getTitolo(): String
+    + setTitolo(value: String): void
+    + getAutore(): String
+    + setAutore(value: String): void
+    + getPagine(): int
+    + setPagine(value: int): void
+}
+@enduml

@@ -1,0 +1,11 @@
+@startuml Frazione
+class Frazione {
+    -numeratore: int
+    -denominatore: int
+    +__init__(numeratore: int, denominatore: int)
+    +__add__(other: Frazione): Frazione
+    +__sub__(other: Frazione): Frazione
+    +__mul__(other: Frazione): Frazione
+    +__str__(): str
+}
+@enduml

@@ -1,0 +1,15 @@
+[{"name" : "<nome_utente1>",
+"surname" : "<cognome_utente1>",
+"worked_hours" : "<ore_lavorate1>",
+"hourly_pay" : "<paga_oraria1>",
+"total" : "<totale1"
+},
+
+
+
+{"name" : "<nome_utente2>",
+"surname" : "<cognome_utente2>",
+"worked_hours" : "<ore_lavorate2>",
+"hourly_pay" : "<paga_oraria2>",
+"total" : "<totale2"
+}]

@@ -1,0 +1,39 @@
+@startuml Verifica
+class Dispositivo {
+  -marca
+  -modello
+  -prezzo
+  -disponibile
+  +vendi()
+  +rifornisci()
+  +descrizione()
+  +{static} calcola_sconto(prezzo: float, sconto: float): float
+  +{static} conta_dispositivi(): int
+}
+
+class Smartphone {
+  -memoria
+  +descrizione()
+}
+
+class Laptop {
+  -ram
+  +descrizione()
+}
+
+class Tablet {
+  -dimensione_schermo
+  +descrizione()
+}
+
+class Inventario  {
+    +aggiungi_dispositivo
+
+}
+
+
+Dispositivo <|-- Smartphone
+Dispositivo <|-- Laptop
+Dispositivo <|-- Tablet
+Dispositivo <|-- Inventario
+@enduml

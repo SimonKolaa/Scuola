@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>La Moka di Bialetti</title>
+
+<style>
+body { font-family: sans-serif; text-align: center; }
+h1 { color: #000000; }
+.container { width: 80%; margin: auto; }
+img { max-width: 100%; height: auto; margin-bottom: 20px; }
+#autore { font-style: italic; color: #696969; transform: rotate(-5deg); display: inline-block; }
+form { text-align: left; margin-top: 20px; }
+label { display: block; margin-bottom: 5px; }
+input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
+@media only screen and (max-width:800px) {
+  /* per tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* Per il telefono: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+<link rel="stylesheet" href="style.css">
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>La Moka: Un'icona Italiana</h1>
+        <a href="http://it.wikipedia.org/wiki/Moka" target="_blank">
+            <img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBPos2ZvslzCsFPxr0fy3h9dXN5fF23Cxikl7XtH0YthMm_Nn8GZgR-W1yxiX6Ie2q0UxOhrCZJcPtWOPl5I5odBL10Qij6ZRqB795Jy9_m1eTw=w105-h70-c" alt="Moka nuova">
+        </a>
+        <p>
+            La Moka (oppure moca), comunemente chiamata anche caffettiera o anche macchinetta
+del caffè (spesso abbreviato in macchinetta), è un apparecchio per la preparazione
+del caffè, ideato da Alfonso Bialetti nel 1933. Il corpo è fatto di alluminio e le
+maniglie di bachelite. Esistono diverse taglie di moka, che possono produrre l'equivalente
+in caffè da una fino a diciotto tazzine. Si tratta di un prodotto di disegno industriale
+italiano famoso in tutto il mondo.
+
+Per fare il caffè con questa macchinetta, si riempie d'acqua il bollitore fino a sfiorare
+il livello della valvola di sicurezza e si inserisce il filtro metallico a forma di imbuto.
+In quest'ultimo si introduce il caffè macinato, pressandolo o meno (se lo si pressa si avrà
+un caffè molto più forte), poi viene avvitata la parte superiore (raccoglitore, dotato di un
+secondo filtro). Mettendo sul fuoco la moka, l'acqua si riscalda ed evapora, e si produce così
+vapore nel bollitore. Il vapore, espandendosi, esercita la sua pressione sulla superficie
+dell'acqua, la cui massa viene spinta così verso il basso. Trovando uscita solo attraverso
+l'imbuto del filtro, l'acqua sarà costretta a risalire attraverso l'imbuto. Giunta a metà strada,
+l'acqua calda passa attraverso la massa di caffè producendo la bevanda per percolazione.
+Infine, il caffè sale e va a depositarsi nel raccoglitore passando attraverso una cannula detta
+"camino".
+La pressione raggiunta con questo metodo è leggermente superiore a quella atmosferica, sicché
+è possibile raggiungere temperature più alte che con altre caffettiere quali la napoletana.
+Quando il processo è giunto a termine, solo aria e vapore passano dal bollitore al raccoglitore
+superiore, dato che il livello di acqua nel bollitore sarà sceso al livello dell'entrata del
+filtro ad imbuto. L'acqua residua nel bollitore impedirà un surriscaldamento.
+Una guarnizione assicura la sicurezza dell'avvitamento ed una valvola di sicurezza previene un
+aumento eccessivo della pressione nell'apparecchio.
+
+L'origine del nome dell'apparecchio risiede nel nome della città di Mokha in Yemen, una delle
+prime e più rinomate zone di produzione di caffè, in particolare della pregiata qualità arabica.
+Di questa qualità speciale troviamo curiosa testimonianza nel capolavoro di Voltaire, Candido,
+quando il protagonista, in viaggio nell’allora Impero Ottomano, viene ricevuto da un ospite che,
+tra le altre cose, gli offre una bevanda preparata «con caffè di Moca non mescolato con il cattivo
+caffè di Batavia e delle Antille». Si trovano tracce dell'origine del nome MOKHA anche nel romanzo
+"Il Giro del mondo in 80 giorni".
+        </p>
+
+        <h2>Galleria di immagini</h2>
+        <img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBMmEHo6hbHAChAhUKVS0NXi1KkAgboFgDKZsVF36Ginhe1h3VtMMwIao4M4zMmKj7ah6t0unfednXCHwTrSUgmxRnEG8ngGxLQ1gx9CbLXMA_8=w105-h70-c" alt="Moka vecchia">
+        <img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBOpCElvM_XrpPCmtFs6RbeyEW972iqXvaiTA5PD3dYuRoJ0hOLfdTghI7eP4BW_spNcW4OI-m3ATUUofx4yigxdG8dmmswAcEwgR6Ddbcj3XJw=w105-h70-c" alt="Pubblicità Moka">
+        <img src="https://lh3.googleusercontent.com/drive-storage/AJQWtBM5Ux-D0UwKRQbKO0jb-uUtxb5R8PV_7GulkhzcTMN6gD7Q6vGAbHEUYnIOUE3NY2RpA69Upf9QV-9IiL7AP0IKAftgAiKBZI0GHTPamdN1nEo=w105-h70-c" alt="Schema Moka">
+
+        <p id="autore">Autore: [Simon Kola]</p>
+
+        <h2>Richiesta di feedback</h2>
+        <form action="#" method="post"> 
+
+            <div>  <h2>inserisci i tuoi dati</h2>
+                <label for="nome">Nome (obbligatorio):</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+    
+            <div>
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome">
+            </div>
+    
+            <div>
+                <label for="email">Email (obbligatorio):</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <h2>Mandaci le tue osservazioni</h2>
+    
+            <div>
+                <label for="oggetto">Oggetto (obbligatorio):</label>
+                <input type="text" id="oggetto" name="oggetto" required>
+            </div>
+    
+            <div>
+                <label for="messaggio">Messaggio:</label>
+                <textarea id="messaggio" name="messaggio" rows="4"></textarea>
+            </div>
+    
+            <div>
+                <button type="reset">Annulla</button>
+                <button type="submit">Invia</button>
+            </div>
+    
+        </form>
+    
+    </body>
+    </html>

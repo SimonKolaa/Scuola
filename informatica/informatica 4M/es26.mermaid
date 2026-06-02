@@ -1,0 +1,40 @@
+classDiagram
+
+class Veicolo{
+    +str marca
+    +str modello
+    +str carburante
+}
+
+class Auto{
+    +str marca
+    +str modello
+    +str carburante
+}
+
+class Camion{
+    +str marca
+    +str modello
+    +str carburante
+}
+
+class Flotta{
+    + List veicoli
+    + aggiungiVeicolo(Veicolo)
+    + visualizzaVeicoli()
+}
+
+Veicolo <|-- Auto
+Veicolo <|-- Camion
+Flotta "1"-->"*" Veicolo
+
+
+
+
+
+
+%% Il programma ci permette di gestire una flotta aziendale di veicoli. Ogni veicolo ha una marca, un modello e un tipo di carburante. Esistono due tipologie di veicoli: *auto* e *camion*. Ogni veicolo può essere aggiunto alla flotta, e il programma deve consentire di visualizzare le informazioni sui veicoli.
+%%Requisiti:
+%%1. Creare una classe `Veicolo` con gli attributi di base: `marca`, `modello` e `carburante`.
+%%2. Creare due sottoclassi: `Auto` e `Camion`. Ogni sottoclasse deve semplicemente ereditare gli attributi da `Veicolo`.
+%%3. La classe `Flotta` deve gestire una lista di veicoli, permettere l’aggiunta di nuovi veicoli, e la visualizzazione delle informazioni di tutti i veicoli.

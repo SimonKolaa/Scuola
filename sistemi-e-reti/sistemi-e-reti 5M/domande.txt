@@ -1,0 +1,45 @@
+﻿________________
+
+
+1. Quale flag viene impostato nel primo passo del Three-Way Handshake?
+* ✅ SYN (risposta corretta)
+* ACK
+* FIN
+* RST
+Spiegazione: Il client inizia la connessione inviando un segmento con flag SYN=1 per "sincronizzare" i numeri di sequenza con il server. È sempre il primo passo del Three-Way Handshake.
+________________
+
+
+2. Cosa significa MSS?
+* Maximum Server Size
+* Minimum Segment Size
+* ✅ Maximum Segment Size (risposta corretta)
+* Minimum Server Size
+Spiegazione: Indica la dimensione massima dei dati (payload) che un segmento TCP può trasportare, escluso l'header. Viene negoziato durante l'handshake per ottimizzare la trasmissione ed evitare frammentazione.
+________________
+
+
+3. Quanti passi ci sono nel Three-Way Handshake?
+* 2
+* ✅ 3 (risposta corretta)
+* 4
+* 5
+Spiegazione: Il Three-Way Handshake ha esattamente 3 fasi: SYN (client→server), SYN-ACK (server→client), ACK (client→server). Dopo questi 3 step la connessione è stabilita.
+________________
+
+
+4. Qual è il tipo di attacco che inonda il server di richieste SYN?
+* IP Spoofing
+* DDoS
+* ✅ SYN Flooding (risposta corretta)
+* Man in the Middle
+Spiegazione: L'attaccante invia migliaia di richieste SYN ma non completa mai l'handshake (non risponde con l'ACK finale). Il server resta bloccato in attesa di connessioni semi-aperte e si satura, diventando irraggiungibile.
+________________
+
+
+5. Cosa fa il protocollo Sliding Window?
+* Cripta i dati
+* ✅ Controlla flusso e errori (risposta corretta)
+* Comprime i dati
+* Autentica l'utente
+Spiegazione: Il meccanismo Sliding Window permette di inviare più segmenti consecutivi senza aspettare la conferma di ognuno, ma in modo controllato. Gestisce la velocità di trasmissione (flusso) e garantisce che i pacchetti persi vengano ritrasmessi (controllo errori).

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="documentazioni">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="documentazione" type="DocType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="DocType">
+        <xs:sequence>
+            <xs:element name="titolo" type="xs:string"/>
+            <xs:element name="contenuti" type="ContenutiType"/>
+        </xs:sequence>
+        <xs:attribute name="linguaggio" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ContenutiType">
+        <xs:sequence>
+            <xs:element name="contenuto" type="ContenutoType" 
+                       minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ContenutoType">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="spiegazione" type="TestoBreve"/>
+            <xs:element name="codice" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="tipo" type="TipoType" use="required"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="TestoBreve">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5"/>
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TipoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="lista"/>
+            <xs:enumeration value="if"/>
+            <xs:enumeration value="for"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

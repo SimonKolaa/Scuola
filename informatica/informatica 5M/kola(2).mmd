@@ -1,0 +1,60 @@
+erDiagram
+  Filiale {
+        INTEGER codice PK
+        STR indirizzo
+        STR citta
+    }
+
+    Panettiere {
+        INTEGER id PK
+        STR nome
+        STR cognome
+        STR prodotti
+        STR specialità
+        INTEGER filiale_id FK
+    }
+
+    Prodotto {
+        INTEGER id PK
+        STR nome
+        STR prezzo_vendita
+        INTEGER panettiere_id FK
+    }
+
+    Righe_Vendita {
+         INTEGER id PK
+        REAL quantità
+        REAL prezzo_unitario
+       INTEGER prodotto_id FK
+       INTEGER scontrino_id FK
+    }
+
+    Scontrino {
+        INTEGER id PK
+        DATE data
+        INTEGER filiale_id FK
+        REAL importo_totale
+    }
+
+     Ingrediente {
+         INTEGER id PK
+        STR nome
+        REAL prezzo_unitario
+        INTEGER prodotto_id FK
+        INTEGER panettiere_id FK
+       }
+
+    Filiale ||--o{ Panettiere: "lavora"
+    Prodotto ||--o{ Ingrediente: "composto"
+    %%Scontrino }o--o{ Prodotto: "vendita" 
+    Prodotto ||--o{ Righe_Vendita: "venduto"
+    Scontrino ||--o{ Righe_Vendita: "vendita"
+    Panettiere ||--o{ Ingrediente: "utilizza"
+     Panettiere ||--o{ Prodotto: "esegue"
+
+
+
+
+    %%note
+    %%Righe_Vendita è la classe intermedia tra la n-n di scontrino-prodotto
+    

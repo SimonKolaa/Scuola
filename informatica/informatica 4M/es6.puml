@@ -1,0 +1,27 @@
+@startuml galo
+
+class Pagamento {
+    + processa_pagamento()
+}
+
+class CartaDiCredito {
+    +nome: string
+    +numero: string
+    +data: string
+    -cvv: string
+}
+
+class PayPal {
+    +email: str
+    +password: str
+}
+
+class Main {
+    + effettua_pagamento(Pagamento pagamento)
+}
+
+Pagamento <|-- CartaDiCredito
+Pagamento <|-- PayPal
+Main --> Pagamento
+
+@enduml

@@ -1,0 +1,36 @@
+classDiagram
+    class Camera{
+        - int numero
+        - str tipo
+        - str disponibilità(disponibile: str, occupata: str)
+        + camera(numero: int, tipo: str, disponibilità: str)
+        + tipo_camera(tipo: singola, doppia, suite: str)
+        + get_numero() : int
+        + get_tipo() : str
+        + get_disponibilità() : str
+        + get_dettagli
+        + aggiorna_disponibilità
+    }
+    class Albergo {
+        -list[Camera] camere
+        -list[Camera] prenotazioni
+        +aggiungi_camera()
+        +prenota_camera()
+        +visualizza_camere_disponibili()
+        +visualizza_prenotazioni()
+    }
+    
+Albergo "1" -- "*" Camera : possiede
+
+
+%%Descrizione dell'esercizio
+%%Il sistema permette di gestire le prenotazioni in un albergo. L'albergo ha diverse camere, e ogni camera ha un numero, un tipo (singola, doppia, suite) e una disponibilità (occupata o libera). Il sistema deve permettere di:
+%%
+%%- Aggiungere nuove camere all'albergo.
+%%- Prenotare una camera (verificando se è disponibile).
+%%- Visualizzare le camere disponibili.
+%%- Visualizzare le prenotazioni effettuate.
+%%
+%%Il sistema deve includere due classi principali:
+%%1. Camera: rappresenta una singola camera dell'albergo.
+%%2. Albergo: rappresenta l'albergo che gestisce le camere e le prenotazioni.

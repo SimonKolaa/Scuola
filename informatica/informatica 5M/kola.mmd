@@ -1,0 +1,71 @@
+erDiagram
+
+    Piscina {
+        str nome PK
+        str indirizzo
+        str telefono
+        str responsabile
+        str citta
+    }
+    
+    Corso {
+        int id PK
+        str nome_attivita
+        str piscina_nome FK
+        REAL costo
+        int num_max_partecipanti
+        int num_min_partecipanti
+    }
+    
+    Insegnante {
+        str codice_fiscale PK
+        str nome
+        str cognome
+        str cellulare
+        str piscina_nome FK
+    }
+
+    Qualifica {
+        int id PK
+        str insegnante_cf FK
+        str descrizione
+    }
+    
+    Persona {
+        str codice_fiscale PK
+        str nome
+        str cognome
+        str indirizzo
+        str telefono
+    }
+    
+   Iscrizione {
+        int id PK
+        str persona_cf FK
+        int corso_id FK
+    }
+    
+    IngressoSingolo {
+        int id PK
+        str persona_cf FK
+        str piscina_nome FK
+        date data_ingresso
+    }
+
+    %% Relazioni
+    Piscina ||--o{ Corso : "organizza"
+    Piscina ||--o{ Insegnante : "ha"
+    Piscina ||--o{ IngressoSingolo : "ospita"
+    Insegnante ||--o{ Qualifica : "possiede"
+    Corso ||--o{ Persona : "ha iscritti"
+    Persona ||--o{ Iscrizione : "si iscrive con"
+    Persona ||--o{ IngressoSingolo : "può accede con"
+    
+    %% Note
+    %% Piscina identificata dal nome (PK)
+    %% Corso identificato da nome_attivita + piscina (chiave composta)
+    %% Insegnante lavora presso UNA SOLA piscina (relazione 1:N)
+    %% Qualifica: un insegnante può avere più qualifiche (relazione 1:N)
+    %% Persona può essere iscritta a corsi O fare ingressi singoli
+    %% IngressoSingolo: registra solo persone che NON hanno mai frequentato corsi
+    %% tipo in persona: iscritto o ingresso_singolo

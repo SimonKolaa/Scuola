@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentazioni>
+    <documentazione linguaggio="Python">
+        <titolo>Guida Python Base</titolo>
+        
+        <contenuti>
+            <contenuto tipo="lista">
+                <nome>Liste</nome>
+                <spiegazione>Le liste sono collezioni ordinate di elementi</spiegazione>
+                <codice>
+                    <![CDATA[
+numeri = [1, 2, 3]
+print(numeri[0])
+                    ]]>
+                </codice>
+            </contenuto>
+            
+            <contenuto tipo="if">
+                <nome>If</nome>
+                <spiegazione>Struttura per fare scelte nel codice</spiegazione>
+                <codice>
+                    <![CDATA[
+voto = 7
+if voto >= 6:
+    print("Promosso")
+                    ]]>
+                </codice>
+            </contenuto>
+            
+            <contenuto tipo="for">
+                <nome>For</nome>
+                <spiegazione>Ciclo che ripete azioni</spiegazione>
+                <codice>
+                    <![CDATA[
+for i in range(3):
+    print(i)
+                    ]]>
+                </codice>
+            </contenuto>
+        </contenuti>
+    </documentazione>
+</documentazioni>

@@ -1,0 +1,13 @@
+
+<p>Question: {{ flashcard.question }}</p>
+{% if message %}
+<p>{{ message }}</p>
+{% else %}
+<form method="POST">
+    <label for="answer">Your answer:</label>
+    <input type="text" id="answer" name="answer">
+    <input type="submit" value="Submit Answer">
+</form>
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}

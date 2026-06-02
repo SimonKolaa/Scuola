@@ -1,0 +1,29 @@
+@startuml Studente
+class Studente {
+    - nome: str
+    - matricola: str
+    - corsi: List<Corso>
+    + __init__(nome: str, matricola: str)
+    + get_nome(): str
+    + set_nome(nome: str)
+    + get_matricola(): str
+    + set_matricola(matricola: str)
+    + add_corso(corso: Corso)
+    + get_corsi(): List<Corso>
+}
+
+class Corso {
+    - titolo: str
+    - codice: str
+    - studenti: List<Studente>
+    + __init__(titolo: str, codice: str)
+    + get_titolo(): str
+    + set_titolo(titolo: str)
+    + get_codice(): str
+    + set_codice(codice: str)
+    + add_studente(studente: Studente)
+    + get_studenti(): List<Studente>
+}
+
+Studente "0..*" -- "0..*" Corso
+@enduml

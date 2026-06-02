@@ -1,0 +1,35 @@
+per prima cosa posizioniamo l’alimentatore 
+e dopo 3 resistenze tra cui 2 in parallelo e una in serie abbiamo messo il multimetro dove vengono collegati 2 fili quello positivo e quello negativo la corrente positiva è collegata con colore rosso, invece quello negativo è di colore nero
+Le misure sono state fatte con un multimetro che registra la tensione e la corrente
+
+ELENCO ELEMENTI CIRCUITO NR.1
+R1
+R2
+R3
+R4
+1 k0 Resistenza
+Meter
+Meter
+Meters
+Meter4
+Batteria da 9 V
+Tensione Multimetro
+
+
+
+
+ELENCO ELEMENTI CIRCUITO NR. 2
+
+R1
+R2
+R3
+1 kO Resistenza
+P1
+5, 5 Alimentatore
+Meteri
+Meter
+Meters
+Tensione Multimetro
+
+
+

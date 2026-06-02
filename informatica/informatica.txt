@@ -1,0 +1,10 @@
+informatica
+normalizzazione
+
+non bisogna fare ridondanza
+
+1nf devono essere atomici e indivisibili se ci sono piu atributi/liste facciamo una tabella a parte
+
+2nf si controlla nelle n-n e deve dipendere dalle due id
+
+3nf ci deve essere una dipendenza transitiva (collegate) quando a=b b=c cioe a=c
